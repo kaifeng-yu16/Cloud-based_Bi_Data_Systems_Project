@@ -35,9 +35,11 @@ Model training process: [train_model.ipynb](https://github.com/kaifeng-yu16/Drin
 To download the best model to local, first run [list_models.py](https://github.com/kaifeng-yu16/Cloud-based_Big_Data_Systems_Project/blob/main/list_models.py) and then change the model id in [download_model.py](https://github.com/kaifeng-yu16/Cloud-based_Big_Data_Systems_Project/blob/main/download_model.py) to download the model you desired. The downloaded model will be stored in directory [model/](https://github.com/kaifeng-yu16/Cloud-based_Big_Data_Systems_Project/tree/main/model). 
  
 </br>
+
 ### Step 3: Serve the Model
 The model is served as a microservice using Flask. Relavent code: [main.py](https://github.com/kaifeng-yu16/Cloud-based_Big_Data_Systems_Project/blob/main/main.py), [predict.html](https://github.com/kaifeng-yu16/Cloud-based_Big_Data_Systems_Project/tree/main/templates)
    
 </br> 
+
 ### Step 4: Containerize and Deploy the microservice
 Finally, I containerized the microservice and deploy it to AWS AppRunner.[How to deploy?](https://github.com/kaifeng-yu16/Containerized_microservice_deploy_AWS#aws-app-runner-deploy)
