@@ -19,7 +19,12 @@ docker run kaifengyu16/drink_classification_container:v1
 
 ## Workflow
 ### Step 1: Preprocessing and Visualizing Dataset
-The dataset for this project comes from Kaggle: [Caffeine Content of Drinks](https://www.kaggle.com/datasets/heitornunes/caffeine-content-of-drinks)
+The dataset for this project comes from Kaggle: [Caffeine Content of Drinks](https://www.kaggle.com/datasets/heitornunes/caffeine-content-of-drinks).
+I use databricks code [preprocessing.ipynb](https://github.com/kaifeng-yu16/Cloud-based_Big_Data_Systems_Project/blob/main/preprocessing.ipynb) to preprocess data and visualize it.
+
 ### Step 2: Train Models
+The models are trained using using Databricks AutoML and the best model is registered.
+To download the best model to local, first run [list_models.py](https://github.com/kaifeng-yu16/Cloud-based_Big_Data_Systems_Project/blob/main/list_models.py) and then change the model id in [download_model.py](https://github.com/kaifeng-yu16/Cloud-based_Big_Data_Systems_Project/blob/main/download_model.py) to download the model you desired. The downloaded model will be stored in directory "model/".
+
 ### Step 3: Serve the Model
 ### Step 4: Containerize and Deploy the microservice
