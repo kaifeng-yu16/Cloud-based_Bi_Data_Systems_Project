@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Drink type prediction</title>
+    </head>
+    <body>
+        <p>Please enter info for your drink:</p>
+        <form method="POST">
+            <input type="number" step="any" name="volume">
+            <input type="number" name="caffeine">
+            <input type="number" name="calories">
+            <input type="submit" value="translate">
+        </form>
+        {% if name %}
+        </br>{{trans_text}}
+        {% endif %}
+        <br><a href="{{ url_for('hello')}}">back</a><br>
+    </body>
+</html>
