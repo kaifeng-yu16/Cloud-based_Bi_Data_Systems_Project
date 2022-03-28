@@ -19,7 +19,7 @@ docker run kaifengyu16/drink_classification_container:v1
 
 ## Workflow
 ### Step 1: Preprocessing and Visualizing Dataset
-The dataset for this project comes from Kaggle: (Caffeine Content of Drinks)[https://www.kaggle.com/datasets/heitornunes/caffeine-content-of-drinks]
+The dataset for this project comes from Kaggle: [Caffeine Content of Drinks](https://www.kaggle.com/datasets/heitornunes/caffeine-content-of-drinks)
 ### Step 2: Train Models
 ### Step 3: Serve the Model
 ### Step 4: Containerize and Deploy the microservice
