@@ -21,10 +21,14 @@ docker run kaifengyu16/drink_classification_container:v1
 ### Step 1: Preprocessing and Visualizing Dataset
 The dataset for this project comes from Kaggle: [Caffeine Content of Drinks](https://www.kaggle.com/datasets/heitornunes/caffeine-content-of-drinks).
 I use databricks code [preprocessing.ipynb](https://github.com/kaifeng-yu16/Cloud-based_Big_Data_Systems_Project/blob/main/preprocessing.ipynb) to preprocess data and visualize it.
+The original dataset is [caffeine.csv](https://github.com/kaifeng-yu16/Cloud-based_Big_Data_Systems_Project/blob/main/caffeine.csv) and the preprocessed dataset is [caffeine_processed.csv](https://github.com/kaifeng-yu16/Cloud-based_Big_Data_Systems_Project/blob/main/caffeine_processed.csv)
 
 ### Step 2: Train Models
 The models are trained using using Databricks AutoML and the best model is registered.
-To download the best model to local, first run [list_models.py](https://github.com/kaifeng-yu16/Cloud-based_Big_Data_Systems_Project/blob/main/list_models.py) and then change the model id in [download_model.py](https://github.com/kaifeng-yu16/Cloud-based_Big_Data_Systems_Project/blob/main/download_model.py) to download the model you desired. The downloaded model will be stored in directory "model/".
+To download the best model to local, first run [list_models.py](https://github.com/kaifeng-yu16/Cloud-based_Big_Data_Systems_Project/blob/main/list_models.py) and then change the model id in [download_model.py](https://github.com/kaifeng-yu16/Cloud-based_Big_Data_Systems_Project/blob/main/download_model.py) to download the model you desired. The downloaded model will be stored in directory [model/](https://github.com/kaifeng-yu16/Cloud-based_Big_Data_Systems_Project/tree/main/model).
 
 ### Step 3: Serve the Model
+The model is served as a microservice using Flask. Relavent code: [main.py](https://github.com/kaifeng-yu16/Cloud-based_Big_Data_Systems_Project/blob/main/main.py), [predict.html](https://github.com/kaifeng-yu16/Cloud-based_Big_Data_Systems_Project/tree/main/templates)
+
 ### Step 4: Containerize and Deploy the microservice
+Finally, I containerized the microservice and deploy it to AWS AppRunner.[How to deploy?](https://github.com/kaifeng-yu16/Containerized_microservice_deploy_AWS#aws-app-runner-deploy)
