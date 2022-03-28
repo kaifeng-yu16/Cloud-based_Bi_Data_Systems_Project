@@ -25,6 +25,7 @@ The original dataset is [caffeine.csv](https://github.com/kaifeng-yu16/Cloud-bas
 
 ### Step 2: Train Models
 The models are trained using using Databricks AutoML and the best model is registered.
+Model training process: [train_model.ipynb](https://github.com/kaifeng-yu16/Drink_classification_Databricks_AutoML/blob/main/train_model.ipynb)
 To download the best model to local, first run [list_models.py](https://github.com/kaifeng-yu16/Cloud-based_Big_Data_Systems_Project/blob/main/list_models.py) and then change the model id in [download_model.py](https://github.com/kaifeng-yu16/Cloud-based_Big_Data_Systems_Project/blob/main/download_model.py) to download the model you desired. The downloaded model will be stored in directory [model/](https://github.com/kaifeng-yu16/Cloud-based_Big_Data_Systems_Project/tree/main/model).
 
 ### Step 3: Serve the Model
