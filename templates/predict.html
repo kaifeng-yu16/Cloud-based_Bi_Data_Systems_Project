@@ -6,14 +6,13 @@
     <body>
         <p>Please enter info for your drink:</p>
         <form method="POST">
-            <input type="number" step="any" name="volume">
-            <input type="number" name="caffeine">
-            <input type="number" name="calories">
-            <input type="submit" value="translate">
+            <p>Volume (ml): </p><input type="number" step="any" name="volume"></p>
+            <p>Caffeine (mg): </p><input type="number" name="caffeine"></p>
+            <p>Calories: </p></Calories><input type="number" name="calories"></p>
+            <input type="submit" value="predict">
         </form>
         {% if name %}
-        </br>{{trans_text}}
+        </br>This drink is: {{res}}
         {% endif %}
-        <br><a href="{{ url_for('hello')}}">back</a><br>
     </body>
 </html>

@@ -16,6 +16,9 @@ def predict(caffeine, calories, volume):
         "caffeine": {0: caffeine},
     }
     data = pd.DataFrame(data=my_data)
+    data["volume"] = pd.to_numeric(data["volume"]).astype(float, errors = 'raise')
+    data["calories"] = pd.to_numeric(data["calories"]).astype('int32', errors = 'raise')
+    data["caffeine"] = pd.to_numeric(data["caffeine"]).astype('int32', errors = 'raise')
     result = loaded_model.predict(pd.DataFrame(data))
     return result
 
