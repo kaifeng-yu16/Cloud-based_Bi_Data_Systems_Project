@@ -8,5 +8,18 @@ To use this app, go to website https://vimi8fhfnw.us-east-1.awsapprunner.com/pre
 
 ![image](https://user-images.githubusercontent.com/90477174/160330039-5ee8b6bd-1558-42f3-8639-bb012e2f9727.png)
 
+If you want to run this app locally, you can also pull the docker image from dockerhub:
+```
+docker pull kaifengyu16/drink_classification_container:v1
+```
+And then use the following command to run:
+```
+docker run kaifengyu16/drink_classification_container:v1
+```
 
 ## Workflow
+### Step 1: Preprocessing and Visualizing Dataset
+The dataset for this project comes from Kaggle: (Caffeine Content of Drinks)[https://www.kaggle.com/datasets/heitornunes/caffeine-content-of-drinks]
+### Step 2: Train Models
+### Step 3: Serve the Model
+### Step 4: Containerize and Deploy the microservice
